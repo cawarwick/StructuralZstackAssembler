@@ -13,12 +13,21 @@ The image processing just consists of a 3d gaussian blur. The red is a bit more 
 Most of these variables can be left alone assuming you're at the expected resolution and SNR.
 
 //Smoothing variables
+
 //Most of variables are only relevant to images in the ~1um/pixel range
+
 //i.e. if you do a 512x256 image at ~1.6x zoom with the 16x. e.g. the 15pixels should be ~15 microns
+
 GaussianXY=1; //anywhere from 0.5 to 1 is okish depending on SNR
+
 GaussianZ=2; //1 to 2 is fine. Maybe try 1 to 1.5 if SNR is high.
+
 Tophatred=7.5; //the nuclei are smaller, so a smaller tophat is required, 7.5 to 10ish. Much below 5 starts to affect signal
+
 GaussianGreenXY=0.5; //you want less smoothing on the green channel generaly because you have finer structures
+
 GaussianGreenZ=0.5; //you want less smoothing on the green channel generaly because you have finer structures
+
 TophatGreen=15;//15-20 seem sfine for most 512x256 resolution images. Aim for 1.5-2x the size of a cell body
+
 Tophat=1;//If you don't want to do a tophat, put this to 0. This basically just normalizes background brightness
